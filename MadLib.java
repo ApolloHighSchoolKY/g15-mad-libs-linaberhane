@@ -1,4 +1,4 @@
-//© A+ Computer Science  -  www.apluscompsci.com
+//ï¿½ A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -20,7 +20,10 @@ public class MadLib
 
 	public MadLib()
 	{
-
+		verbs.add("run");
+		nouns.add("Jonathan Leohr");
+		adjectives.add("purple");
+		story = "Jonathan Leohr run down the purple road.";
 	}
 
 	public MadLib(String fileName)
@@ -37,7 +40,7 @@ public class MadLib
 
 				//If what was read in is one of the symbols, find a random
 				//word to replace it.
-			}
+			
 
 
 		}
@@ -52,7 +55,19 @@ public class MadLib
 	{
 		try
 		{
+			Random rand = new Random();
+    		int x = rand.nextInt(21) + 1;
 
+    		System.out.println(x);
+
+			Scanner chopper = new Scanner(new File("fileName"));
+
+			while(chopper.hasNext())
+			{
+				System.out.println(chopper.nextLine());
+			}
+
+			chopper.close();
 		}
 		catch(Exception e)
 		{
@@ -65,7 +80,7 @@ public class MadLib
 	{
 		try
 		{
-
+			
 		}
 		catch(Exception e)
 		{
